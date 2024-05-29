@@ -47,7 +47,7 @@ export default defineNuxtConfig({
     plugins: ['@/plugins/chart.js'],
     target: 'static', // default is 'server'
     router: {
-      base: '/CRMveuNuxt/'
+      base: ''
     },
     generate: {
       fallback: true
