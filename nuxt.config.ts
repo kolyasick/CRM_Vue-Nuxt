@@ -45,27 +45,5 @@ export default defineNuxtConfig({
       storesDirs: ['./store/**']
     },
     plugins: ['@/plugins/chart.js'],
-   buildModules: [
-    '@pinia/nuxt',
-  ],
-  nitro: {
-   prerender: {
-      routes: [
-        '/', // добавьте сюда все маршруты, которые нужно пререндерить
-        '/feedback',
-        '/help',
-        '/orders',
-        '/payments',
-        '/settings',
-        '/stat',
-        '/stats',
-        '/customers',
-        '/Login'
-      ],
-    },
-  },
-  generate: {
-    fallback: true,
-  },
 })
 
