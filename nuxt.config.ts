@@ -51,11 +51,6 @@ export default defineNuxtConfig({
     },
     generate: {
       fallback: true
-    },
-  head: {
-    link: [
-      { rel: 'preload', href: '/_payload.json', as: 'fetch', type: 'application/json', crossorigin: 'use-credentials' }
-    ]
-  }
+    }
 })
 
