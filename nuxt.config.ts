@@ -48,6 +48,7 @@ export default defineNuxtConfig({
     target: 'static', // default is 'server'
     generate: {
       fallback: true
-    }
+    },
+    buildDir: 'dist'
 })
 
