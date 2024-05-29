@@ -49,8 +49,19 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
   nitro: {
-    prerender: {
-      routes: ['/'],
+   prerender: {
+      routes: [
+        '/', // добавьте сюда все маршруты, которые нужно пререндерить
+        '/feedback',
+        '/help',
+        '/orders',
+        '/payments',
+        '/settings',
+        '/stat',
+        '/stats',
+        '/customers',
+        '/Login'
+      ],
     },
   },
   generate: {
