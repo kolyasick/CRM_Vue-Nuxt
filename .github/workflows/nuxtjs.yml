@@ -38,8 +38,9 @@ jobs:
           path: dist
 
   deploy:
-    env:
-      NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
