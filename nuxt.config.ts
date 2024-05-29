@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
     modules: [
         '@nuxt/ui',
         '@nuxt/image',
@@ -51,6 +51,11 @@ export default defineNuxtConfig({
     },
     generate: {
       fallback: true
-    }
+    },
+  head: {
+    link: [
+      { rel: 'preload', href: '/_payload.json', as: 'fetch', type: 'application/json', crossorigin: 'use-credentials' }
+    ]
+  }
 })
 
