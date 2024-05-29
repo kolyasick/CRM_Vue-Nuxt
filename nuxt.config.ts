@@ -45,16 +45,27 @@ export default defineNuxtConfig({
     storesDirs: ['./store/**']
   },
   plugins: ['@/plugins/chart.js'],
-  target: 'static', // This is correct for static sites
-  router: {
-    base: '/CRMveuNuxt/' // Make sure this matches your GitHub Pages repo name
+  buildModules: [
+    '@pinia/nuxt',
+  ],
+  nitro: {
+    prerender: {
+      routes: [
+        '/', // добавьте сюда все маршруты, которые нужно пререндерить
+        '/feedback',
+        '/help',
+        '/orders',
+        '/payments',
+        '/settings',
+        '/stat',
+        '/stats',
+        '/customers',
+        '/Login'
+      ],
+    },
   },
   generate: {
-    fallback: true, // This allows your app to handle 404s
+    fallback: true, // генерирует 404.html для всех несуществующих страниц
   },
-  head: {
-    link: [
-      { rel: 'preload', href: '/CRMveuNuxt/_payload.json', as: 'fetch', type: 'application/json', crossorigin: 'use-credentials' }
-    ]
-  }
+}
 })
