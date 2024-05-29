@@ -1,3 +1,4 @@
+import { defineStore } from 'pinia'
 
 interface IAuthStore {
     email: string,
