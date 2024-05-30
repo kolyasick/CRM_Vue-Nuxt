@@ -82,8 +82,8 @@ useHead({
         <h1 class="font-bold text-2xl mb-5 text-center">Login</h1>
 
         <form>
-            <UiInput @input="errors=null" v-model="emailRef" placeholder="*Email" type="email"  class="mb-3" />
-            <UiInput @input="errors=null" v-model="passwordRef" placeholder="*Password" type="password"  class="mb-3" />
+            <UiInput @input="errors=null" v-model="emailRef" placeholder="Email" type="email"  class="mb-3" />
+            <UiInput @input="errors=null" v-model="passwordRef" placeholder="Password" type="password"  class="mb-3" />
             <UiInput @input="errors=null" v-model="nameRef" placeholder="Name" type="name"  class="mb-3" />
 
             <span v-if="errors">
