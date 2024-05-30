@@ -56,8 +56,8 @@ const login = async () => {
 const register = async () => {
   errors.value = null
 
-  if (!emailRef.value || !passwordRef.value) {
-    errors.value = 'Please enter email and password'
+  if (!emailRef.value || !passwordRef.value || !nameRef.value) {
+    errors.value = 'Please enter email, password and name'
     return
   } else if (!emailRef.value.match(emailRegex)) {
     errors.value = 'Please enter valid email'
