@@ -66,8 +66,12 @@ const register = async () => {
     errors.value = 'Password must be at least 6 characters'
     return
   }
+  isLoadingStore.set(true)
+  
   await account.create(uuid(), emailRef.value, passwordRef.value, nameRef.value)
   await login();
+
+  isLoadingStore.set(false)
 }
 
 useHead({
